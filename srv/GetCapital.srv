@@ -1,0 +1,4 @@
+string country_name
+---
+string capital_name
+bool success
