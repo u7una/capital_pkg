@@ -29,4 +29,4 @@ jobs:
         run: |
           source /opt/ros/humble/setup.bash
           source install/setup.bash
-          bash src/capital_pkg/test.bash
+          bash test.bash
