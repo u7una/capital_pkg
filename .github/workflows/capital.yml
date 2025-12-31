@@ -21,7 +21,7 @@ jobs:
 
       - name: build workspace
         run: |
-          source /optros/humble/setup.bash
+          source /opt/ros/humble/setup.bash
           colcon build --packages-select capital_pkg
           
 
