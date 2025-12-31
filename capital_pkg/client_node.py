@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# SPDX-FileCopyrightText: 2025 Yuna Furuhata
+# SPDX-License-Identifier: BSD-3-Clause
 import sys
 import rclpy
 from rclpy.node import Node
