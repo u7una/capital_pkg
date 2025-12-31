@@ -1,5 +1,5 @@
 # capital_pkg
-![Capital Package CI](https://github.com/u7una/capital_pkg/.github/workflows/capital.yml/badge.svg)
+![Capital Package CI](https://github.com/u7una/capital_pkg/actions/workflows/capital.yml/badge.svg)
 
 ROS 2 Humble を使用した、東南アジアの国名から首都名を検索するサービス通信用のパッケージです。 
 
@@ -29,7 +29,7 @@ ROS 2 Humble を使用した、東南アジアの国名から首都名を検索�
 # このリポジトリをクローン
 # ros_2wsは各自のワークスペース名に変更してください
 $ cd ~/ros2_ws/src
-$ git clone https://git.com/u7una/capital_pkg.git
+$ git clone https://github.com/u7una/capital_pkg.git
 
 # ビルドを実行
 $ cd ~/ros2_ws
