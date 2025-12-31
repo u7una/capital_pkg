@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 import rclpy
 from rclpy.node import Node
-from capital_pkg.srv import GetCapital # 自作型をインポート
+from capital_pkg.srv import GetCapital 
 
 class CapitalServer(Node):
     def __init__(self):

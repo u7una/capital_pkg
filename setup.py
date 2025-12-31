@@ -15,8 +15,8 @@ setup(
     zip_safe=True,
     maintainer='yuna',
     maintainer_email='s24c1107ca@s.chibakoudai.jp',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='東南アジアの国名から首都名を出す',
+    license='BSD-3-Clause',
     extras_require={
         'test': [
             'pytest',
@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'server_node = capital_pkg.server_node:main',
+            'client_node = capital_pkg.client_node:main',
         ],
     },
 )
