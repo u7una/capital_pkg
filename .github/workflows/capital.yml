@@ -19,11 +19,11 @@ jobs:
           required-ros-distributions: humble
           use-ros-testing-repos: true
 
-      - name: build and test
-        uses: ros-tooling/action-ros-ci@v0.3
-        with:
-          package-name: capital_pkg
-          target-ros2-distro: humble
+      - name: build workspace
+        run: |
+          source /optros/humble/setup.bash
+          colcon build --packages-select capital_pkg
+          
 
       - name: run test.bash
         run: |
