@@ -59,17 +59,15 @@ $ ros2 run capital_pkg client_node.py [国名]
 ## 実行結果
 
 ### サーバー側
-サーバーが起動すると、リクエスト待機状態になります。
+サーバーが起動すると、リクエストを受信すると以下のように表示されます。
 ```text
-yuna@DESKTOP-300LQJ8:~/ros2_ws$ ros2 run capital_pkg server_node.py
 [INFO] [1767016277.263041563] [capital_server]: Server is Ready
 [INFO] [1767016296.380670087] [capital_server]: received request for: フィリピン
 ```
 
 ### クライアント側
-国名を引数として渡すと、サーバーから取得した首都名を表示します。
+指定した国名に対応する首都名が表示されます。
 ```text
-yuna@DESKTOP-300LQJ8:~/ros2_ws$ ros2 run capital_pkg client_node.py フィリピン
 Capital: マニラ
 ```
 
