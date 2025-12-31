@@ -1,5 +1,5 @@
 # capital_pkg
-![CI Status](https://github.com/u7una/capital_pkg/blob/main/.github/workflows/capital.yml/badge.svg)
+![CI Status](https://github.com/u7una/capital_pkg/.github/workflows/capital.yml/badge.svg)
 
 ROS 2 Humble を使用した、東南アジアの国名から首都名を検索するサービス通信用のパッケージです。 
 
