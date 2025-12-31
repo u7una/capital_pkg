@@ -2,8 +2,6 @@
 # SPDX-FileCopyrightText: 2025 Yuna Furuhata
 # SPDX-License-Identifier: BSD-3-Clause
 
-source ~/ros2_ws/src/install/setup.bash
-
 ng () {
     echo "${1}行目が違うよ"
     res=1
@@ -11,14 +9,21 @@ ng () {
 
 res=0
 
-ros2 run capital_pkg client_node.py フィリピン
+source ./install/setup.bash || ng "$LINENO"
+
+ros2 run capital_pkg server_node.py &
+SERVER_PID=$!
+sleep 5
+
+
+out=$(ros2 run capital_pkg client_node.py フィリピン)
 status=$?
 
 [ "$status" -eq 0 ] || ng "$LINENO"
-echo "$out" | grep -q "マニラ" || ng "LINENO"
+echo "$out" | grep -q "マニラ" || ng "$LINENO"
 
-out=$(ros2 run capital_pkg client_node.py アメリカ
-echo "$out" | grep -q "not found" || ng "$LINENO"
+out=$(ros2 run capital_pkg client_node.py 日本)
+echo "$out" | grep -q "Not found" || ng "$LINENO"
 
 kill $SERVER_PID
 
