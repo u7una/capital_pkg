@@ -10,6 +10,20 @@ ROS 2 Humble を使用した、東南アジアの国名から首都名を検索�
 * **Server**: 国名のリクエストを受け取り、対応する首都名を返します。
 * **Client**: コマンドライン引数から国名を受け取り、サーバーへ問い合わせて結果を表示します。
 
+## サービス仕様
+
+### ノード一覧
+| ノード名 | 役割 | サービス名 | サービス型 |
+| :--- | :--- | :--- | :--- |
+| 'capital_server' | 国名を受け取り対応する首都名を返す | 'get_capital' | 'capital_pkg/srv/Capital' | 
+| 'capital_client' | 入力をサーバーに送信し、結果を表示 | 'get_capital' | 'capital_pkg/srv/Capital' |
+
+### サービス型の表
+| 変数名 | 型 | 内容 |
+| 'country_name' | 'string' | 検索したい国名 |
+| 'capital_name' | 'string' | 首都名 |
+| 'success' | 'bool' | データが見つかればtrue、なければfaise |
+
 ---
 
 ## 動作環境
