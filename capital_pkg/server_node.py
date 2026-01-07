@@ -7,8 +7,7 @@ from capital_pkg.srv import GetCapital
 
 class CapitalServer(Node):
     def __init__(self):
-        super().__init__('capital_server')
-        self.data = {"Japan": "Tokyo", "France": "Paris", "USA": "Washington D.C."}
+        super().__init__('capital_server')        
         self.srv = self.create_service(GetCapital, 'get_capital', self.callback)
         self.get_logger().info('Server is Ready')
 
