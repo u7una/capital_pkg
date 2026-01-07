@@ -15,8 +15,8 @@ ROS 2 Humble を使用した、東南アジアの国名から首都名を検索�
 ### ノード一覧
 | ノード名 | 役割 | サービス名 | サービス型 |
 |----------|------|------------|------------|
-| `capital_server` | 国名を受け取り対応する首都名を返す | `get_capital` | `capital_pkg/srv/Capital` | 
-| `capital_client` | 入力をサーバーに送信し、結果を表示 | `get_capital` | `capital_pkg/srv/Capital` |
+| `capital_server` | 国名を受け取り対応する首都名を返す | `get_capital` | `capital_pkg/srv/GetCapital` | 
+| `capital_client` | 入力をサーバーに送信し、結果を表示 | `get_capital` | `capital_pkg/srv/GetCapital` |
 
 ### サービス型の表
 | 変数名 | 型 | 内容 |
@@ -74,14 +74,14 @@ $ ros2 run capital_pkg client_node.py [国名]
 ## 実行結果
 
 ### サーバー側
-サーバーが起動すると、以下のように表示されます。
+サーバーが起動し、リクエストを受信すると以下のように表示されます。
 ```text
 [INFO] [1767016277.263041563] [capital_server]: Server is Ready
 [INFO] [1767016296.380670087] [capital_server]: received request for: フィリピン
 ```
 
 ### クライアント側
-リクエストを受信すると指定した国名に対応する首都名が表示されます。
+リクエストを送信すると指定した国名に対応する首都名を受信して表示されます。
 ```text
 Capital: マニラ
 ```
