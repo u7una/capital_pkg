@@ -59,14 +59,14 @@ $ ros2 run capital_pkg client_node.py [国名]
 ## 実行結果
 
 ### サーバー側
-サーバーが起動すると、リクエストを受信すると以下のように表示されます。
+サーバーが起動すると、以下のように表示されます。
 ```text
 [INFO] [1767016277.263041563] [capital_server]: Server is Ready
 [INFO] [1767016296.380670087] [capital_server]: received request for: フィリピン
 ```
 
 ### クライアント側
-指定した国名に対応する首都名が表示されます。
+リクエストを受信すると指定した国名に対応する首都名が表示されます。
 ```text
 Capital: マニラ
 ```
